@@ -5,7 +5,6 @@
  */
 package kata2;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -18,9 +17,9 @@ public class Kata2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Integer[] data = {1, -1, 0, 3, 1, 1, 1, 0, 4, 5, 7, 2, -1, 4, 3, 2, 0, 1};
+        String[] data = {"Rojo", "Blanco", "Negro", "Azul", "Rojo", "Rojo", "Rojo", "Negro", "Rosa", "Gris", "Verde", "Amarillo", "Blanco", "Rosa", "Azul", "Amarillo", "Negro", "Rojo"};
         Histogram histo = new Histogram(data);
-        Map<Integer,Integer> histogr = histo.getHistogram();
+        Map<String,Integer> histogr = histo.getHistogram();
         histogr.entrySet().forEach((entry) -> {
             System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
         }); 
