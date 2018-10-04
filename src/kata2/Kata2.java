@@ -18,8 +18,7 @@ public class Kata2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] data;
-        data = new int[] {1, -1, 0, 3, 1, 1, 1, 0, 4, 5, 7, 2, -1, 4, 3, 2, 0, 1};
+        Integer[] data = {1, -1, 0, 3, 1, 1, 1, 0, 4, 5, 7, 2, -1, 4, 3, 2, 0, 1};
         Histogram histo = new Histogram(data);
         Map<Integer,Integer> histogr = histo.getHistogram();
         histogr.entrySet().forEach((entry) -> {
