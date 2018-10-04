@@ -20,12 +20,9 @@ public class Kata2 {
     public static void main(String[] args) {
         int[] data;
         data = new int[] {1, -1, 0, 3, 1, 1, 1, 0, 4, 5, 7, 2, -1, 4, 3, 2, 0, 1};
-        Map<Integer, Integer> histogram; 
-        histogram = new HashMap<>();
-        for (int i : data) {
-            histogram.put(i, histogram.containsKey(i) ? histogram.get(i) + 1 : 1);
-        }
-        histogram.entrySet().forEach((entry) -> {
+        Histogram histo = new Histogram(data);
+        Map<Integer,Integer> histogr = histo.getHistogram();
+        histogr.entrySet().forEach((entry) -> {
             System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
         }); 
     }
